@@ -1,0 +1,35 @@
+bundleassemblies=false
+aotassemblies=false
+androidaddkeepalives=true
+androidaotmode=none
+androidembedprofilers=
+androidenableprofiledaot=
+androiddextool=d8
+androidlinktool=
+androidlinkresources=false
+androidpackageformat=apk
+embedassembliesintoapk=true
+androidlinkmode=sdkonly
+androidlinkskip=
+androidsdkbuildtoolsversion=32.0.0
+androidsdkpath=c:\program files (x86)\android\android-sdk\
+androidndkpath=
+javasdkpath=c:\program files\microsoft\jdk-17.0.19.10-hotspot\
+androidsequencepointsmode=normal
+xamarinandroidversion=13.2.2-0
+monosymbolarchive=true
+androiduselatestplatformsdk=false
+targetframeworkversion=v11.0
+androidcreatepackageperabi=
+androidgeneratejnimarshalmethods=false
+os=windows_nt
+androidincludedebugsymbols=false
+androidpackagenamingpolicy=lowercasecrc64
+_nugetassetstimestamp=639169615048752170
+typemapkind=mvid
+androidsupportedabis=arm64-v8a
+armeabi-v7a
+x86
+x86_64
+androidmanifestplaceholders=
+projectfullpath=c:\games\zd4_romanov-main\zd4_romanov.android\zd4_romanov.android.csproj
