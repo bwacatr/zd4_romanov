@@ -4,28 +4,45 @@
              x:Class="zd4_Romanov.Page1"
              Title="Кредитный калькулятор">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Сумма кредита" FontSize ="Medium" Margin="0,20,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
-            <Entry x:Name="CreditSumText" TextChanged="CreditSumText_TextChanged" Margin="0,20,0,0"/>
-            
-            <Label  Text="Срок (месяцев)"  FontSize ="Medium" Margin="0,20,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-            <Entry x:Name="TimeText" TextChanged="CreditSumText_TextChanged" Margin="0,20,0,0" />
-            
-            <Label  Text="Форма оплаты"  FontSize ="Medium" Margin="0,20,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-            <Picker x:Name="PickerItem" SelectedIndexChanged="PickerItem_SelectedIndexChanged" Margin="0,20,0,0">
-                <Picker.Items>
-                    <x:String>Аннуитетный</x:String>
-                    <x:String>Дифференцированный</x:String>
-                </Picker.Items>
-            </Picker>
+        
+            <Grid Padding="30, 80" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Label Text="Сумма кредита" FontSize ="Medium" Margin="0,0,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+                <Entry x:Name="CreditSumText" TextChanged="CreditSumText_TextChanged" Margin="0,0,0,0"/>
+            </StackLayout>
 
-            <Label  Text="Процентная ставка"  FontSize ="Medium" Margin="0,20,0,0" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-            <Slider x:Name="rateSlider" Margin="0,20,0,0"   ValueChanged="rateSlider_ValueChanged" BackgroundColor="WhiteSmoke" MinimumTrackColor="Blue" MaximumTrackColor="WhiteSmoke" ThumbColor="Blue" Value="5" Maximum="100" Minimum="1"/>
-            <Label x:Name="rateLabel" FontSize ="Medium" Margin="0,20,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+            <StackLayout Grid.Row="1">
+                <Label  Text="Срок (месяцев)"  FontSize ="Medium" Margin="0,0,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="TimeText" TextChanged="CreditSumText_TextChanged" Margin="0,0,0,0" />
+            </StackLayout>
 
-            <Label x:Name="MonthlyPayment" FontSize ="Medium" Margin="0,20,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-            <Label x:Name="WholeSumLabel" FontSize ="Medium" Margin="0,20,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-            <Label x:Name="OverpayLabel" FontSize ="Medium" Margin="0,20,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-        </StackLayout>
+            <StackLayout Grid.Row="2">
+                <Label  Text="Форма оплаты"  FontSize ="Medium" Margin="0,0,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                <Picker x:Name="PickerItem" SelectedIndexChanged="PickerItem_SelectedIndexChanged" Margin="0,0,0,0">
+                    <Picker.Items>
+                        <x:String>Аннуитетный</x:String>
+                        <x:String>Дифференцированный</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+
+            <StackLayout Grid.Row="3">
+                <Label  Text="Процентная ставка"  FontSize ="Medium" Margin="0,0,0,0" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                <Slider x:Name="rateSlider" Margin="0,20,0,0"   ValueChanged="rateSlider_ValueChanged" BackgroundColor="WhiteSmoke" MinimumTrackColor="Blue" MaximumTrackColor="WhiteSmoke" ThumbColor="Blue" Value="5" Maximum="100" Minimum="1"/>
+                <Label x:Name="rateLabel" FontSize ="Medium" Margin="0,0,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="4">
+            <Label x:Name="MonthlyPayment" FontSize ="Medium" Margin="0,0,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                <Label x:Name="WholeSumLabel" FontSize ="Medium" Margin="0,0,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                <Label x:Name="OverpayLabel" FontSize ="Medium" Margin="0,0,0,0"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
